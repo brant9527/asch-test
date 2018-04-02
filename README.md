@@ -21,3 +21,6 @@ npm install -g asch-cli
 > node app.js
 安装过程中如果遇到 libsodium 加密功能问题
 https://www.npmjs.com/package/sodium 查了下官方包，说的是缺少libsodium，需要自己编译好。按照官网上面步骤走
+
+官方项目钱包，缺少编译后的dist目录，需要自己npm install 一下。根据log提示，按需进行安装需要的模块
+经过一些列安装后遇到npm 出现问题重新安装过node 哈呦
