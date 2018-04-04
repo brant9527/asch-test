@@ -1,5 +1,5 @@
 # 1 asch 安装阿希以及钱包
-to run asch project and pubilsh dapp on asch（if anynoe need english transler，please connect me）
+to run asch project and pubilsh dapp on asch（if anynoe need transler this，please connect me）
 
 ## 1.1 asch 下载安装步骤
 > git clone https://github.com/AschPlatform/asch.git
