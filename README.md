@@ -69,8 +69,11 @@ https://www.npmjs.com/package/sodium 查了下官方包，说的是缺少libsodi
 
 ## 2.1 生成五个账户
 每个dapp都有独立的受托人，这些受托人也是默认的记账人，他们负责区块的生产，跨链资产的中转，与此同时可以获得交易手续费。
+
 注册dapp的时候，我们只需要收集受托人的公钥就行，为了权力分散，最好每个秘钥分别由一个人保管。
+
 这里为了演示，我们一次性创建5个账户，一个dapp最多有101个受托人，最少是5个。
+
 // 注意这里的密码都是演示用途，且不可用于正式的dapp中
 
     > asch-cli crypto -g
@@ -129,15 +132,20 @@ https://www.npmjs.com/package/sodium 查了下官方包，说的是缺少libsodi
 我们可以使用registerdapp注册应用到主链，如下所示
 
 // 先生成一个dapp注册账户
+
 // 注意这里的密码都是演示用途，且不可用于正式的dapp中
     > asch-cli crypto -g
     ? Enter number of accounts to generate 1
+    
     [ { address: 'A9rhsV5xDny4G45gD2TXmFFpeiTfvAAQ7W',
         secret: 'possible melt adapt spoon wing coyote found flower bitter warm tennis easily',
         publicKey: '74db8511d0021206abfdc993a97312e3eb7f8595b8bc855d87b0dc764cdfa5a8' } ]
+        
     Done
 
-    // 在http://127.0.0.1:4096用localnet的创世账户“someone manual strong movie roof episode eight spatial brown soldier soup motor”登陆（该账户中有初始发行的1亿xas token），然后给A9rhsV5xDny4G45gD2TXmFFpeiTfvAAQ7W地址转10000个xas
+    // 在http://127.0.0.1:4096用localnet的创世账户
+    “someone manual strong movie roof episode eight spatial brown soldier soup motor”
+    登陆（该账户中有初始发行的1亿xas token），然后给A9rhsV5xDny4G45gD2TXmFFpeiTfvAAQ7W地址转10000个xas
     
     > asch-cli registerdapp -f dapp.json -e "possible melt adapt spoon wing coyote found flower bitter warm tennis easily"
     # 返回结果如下,这就是应用id。每个应用注册时返回的id不同，请记下你自己的应用id
